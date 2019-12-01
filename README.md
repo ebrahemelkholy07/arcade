@@ -1,20 +1,26 @@
-# Classic Arcade Game Clone Project
+# Classic Arcade Game
 
 ## Table of Contents
 
-- [Instructions](#instructions)
-- [Contributing](#contributing)
+* [Introduction](#introduction)
+* [Dependencies](#dependencies)
+* [How To Run The Game](#how-to-run-the-game)
+* [GameLogic](#gamelogic)
 
-## Instructions
 
-Use this [rubric](https://review.udacity.com/#!/rubrics/15/view) for self-checking your submission.
+## Introduction
 
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
+This project is about classic arcade game that has 3 Bugs and one player.
 
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
+## How To Run the Game
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+You can clone the repo from Github or download as zip then extract it.
+to run the game you have to run index file on any browser.
 
-## Contributing
+## GameLogic
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+The goal of the player is to reach the water, without collisions with any one of the enemies. 
+The player can move left, right, up and down. 
+The enemies move in random speeds horizontaly. 
+When the player makes collision with an enemy, the game is reset and the player moves back to the start position. 
+When the player reaches the water the player wins.

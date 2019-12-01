@@ -1,3 +1,4 @@
+'use strict';
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
     // Variables applied to each of our instances go here,
@@ -45,6 +46,23 @@ var Player = function(x, y) {
     this.sprite = 'images/char-boy.png';
 }
 Player.prototype.update = function() {
+    // to prevent player of moving down out canvas 
+    if (this.y > 385) {
+        this.y = 385;
+    }
+    // to prevent player of moving right out canvas 
+    if (this.x > 400) {
+        this.x = 400;
+    }
+    // to prevent player of moving left out canvas 
+    if (this.x < 0) {
+        this.x = 0;
+    }
+    // Check if player win and reach water , reset player position
+    if (this.y < 0) {
+        this.x = 205;
+        this.y = 385;            
+    }
 }
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
